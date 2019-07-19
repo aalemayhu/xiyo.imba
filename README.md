@@ -1,8 +1,14 @@
 # XIYO
 
-A URL shortener written in [Imba][0].
+A URL storage tool written in [Imba][0]. It was supposed to be a URL shortener
+but the urls are just stored in a table and whenever the url is redirected to
+the visits column is incremented.
 
-The server code in [main.imba][i] is based on the great work by Sindre Aarsaether on [Imba Router - Serverside routing][1]
+The server code in [main.imba][i] is based on the great work by Sindre
+Aarsaether from [Imba Router - Serverside routing][1]
+
+![Form](./GitHub/Form.png)
+![Shortened](./GitHub/Shortened.png)
 
 ## Usage
 
