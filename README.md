@@ -12,6 +12,8 @@ Aarsaether from [Imba Router - Serverside routing][1]
 
 ## Usage
 
+Assuming you have setup the PostgreSQL database server you can run
+
 ```
 $ yarn install
 $ ./main.imba 
