@@ -15,6 +15,7 @@ export class FrontPage
 				<title>	"XIYO.no - URL shortener written in Imba"
 				<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
 				<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js">
+				<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 			<body>
 				<App[data]>
 		
