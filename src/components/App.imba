@@ -16,7 +16,8 @@ export tag App
 								<a>	"{data:shortened}"
 							<a href="/"> "Back"
 					<hr>
-					<p> "Visits {data:visits}"
+					if data:visits
+						<p> "Visits {data:visits}"
 					<span> 
 						"Built with"
 						<a href="https://github.com/imba/imba"> " Imba"
