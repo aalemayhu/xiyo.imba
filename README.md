@@ -23,6 +23,16 @@ Listening on http://localhost:8080
 
 Then visit [http://localhost:8080](http://localhost:8080).
 
+### Docker
+
+If you don't want to install the dependencies you can run it under docker
+
+```bash
+$ docker build -t xiyo.imba .
+$ docker run -p 8080:8080 xiyo.imba
+Listening on http://localhost:8080
+```
+
 ## Design
 
 This is a very naive implementation which stores all urls in a PostgreSQL database
