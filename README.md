@@ -2,10 +2,11 @@
 
 A URL storage tool written in [Imba][0]. It was supposed to be a URL shortener
 but the urls are just stored in a table and whenever the url is redirected to
-the visits column is incremented.
+the `visits` column is incremented.
 
 The server code in [main.imba][i] is based on the great work by Sindre
-Aarsaether from [Imba Router - Serverside routing][1] and the project was setup using the cool [start-imba][2] tool.
+Aarsaether from [Imba Router - Serverside routing][1] and the project was setup
+using the cool [start-imba][2] tool.
 
 ![Form](./GitHub/Form.png)
 ![Shortened](./GitHub/Shortened.png)
