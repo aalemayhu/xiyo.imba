@@ -14,7 +14,7 @@ export class Database
 			user: PGUSER,
 			host: PGHOST,
 			database: PGDATABASE,
-			password: PGDATABASE
+			password: PGPASSWORD
 			port: PGPORT,
 		})
 
