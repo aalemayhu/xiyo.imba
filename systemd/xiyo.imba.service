@@ -5,6 +5,8 @@ After=network.target
 
 [Service]
 Environment=PORT=8080
+Environment=PGPASSWORD=<secret>
+Environment=HOST_NAME=xiyo.no
 User=scanf
 Group=scanf
 ExecStart=/home/scanf/.yarn/bin/imba main.imba
