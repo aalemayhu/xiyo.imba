@@ -1,0 +1,17 @@
+[Unit]
+Description=A very basic URL storage tool
+Documentation=https://github.com/scanf/xiyo.imba
+After=network.target
+
+[Service]
+Environment=PORT=8080
+User=scanf
+Group=scanf
+ExecStart=/home/scanf/.yarn/bin/imba main.imba
+Restart=on-failure
+WorkingDirectory=/home/scanf/src/github.com/scanf/xiyo.imba
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=xiyo.imba
+[Install]
+WantedBy=multi-user.target
