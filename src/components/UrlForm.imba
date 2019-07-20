@@ -4,6 +4,6 @@ export tag UrlForm < form
 		<self action="/create/">
 			<div.field.has-addons>
 				<div.control.is-expanded>
-					<input@input.input.is-large type='url' name='url' placeholder='Enter your URL here'>
+					<input@input.input type='url' name='url' placeholder='Enter your URL here' css:width='256px'>
 				<div.control>
-					<button.button.is-link.is-large> "Shorten"
+					<button.button.is-link> "Shorten"
