@@ -25,4 +25,4 @@ export def RedirectHandler req, res
 			await db.psql 'update-visits', 'UPDATE urls SET visits = visits + 1 WHERE id = $1', [id]
 			res.redirect(target)
 		else
-			res.status(400).send
+			res.status(404).send
