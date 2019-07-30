@@ -1,5 +1,4 @@
 import HostInformation from '../util/HostInformation'
-import Database from '../util/Database'
 
 def lookupUrl db, url
 	let matchRes = await db.psql 'lookup-url', 'SELECT id,visits FROM urls WHERE url = $1', [url]
@@ -8,17 +7,14 @@ def lookupUrl db, url
 	else
 		return null
 
-export def CreateHandler req, res
-	let db = Database.new
-	
+export def CreateHandler req, res, db
+	let url = req:body:url
 	# Bad input
-	if !req:query:url
+	if !url
 		console.log "missing url"
-		res.status(400)
+		res.status(400).send
 		return
-
 	# Check if the url has already been registered
-	let url = req:query:url
 	let exists = await lookupUrl(db, url)
 	if !exists
 		# Otherwise create the url

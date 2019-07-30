@@ -1,15 +1,10 @@
-import CreateHandler from './CreateHandler'
 import Database from '../util/Database'
 import FrontPage from './FrontPage'
 
-export def RedirectHandler req, res
-	let db = Database.new
+export def RedirectHandler req, res, db
 
-	if req:originalUrl.includes "create"
-		CreateHandler(req, res)
-		return
-	else if req:originalUrl.includes "shortened"
-		FrontPage.new(req, res)
+	if req:originalUrl.includes "shortened"
+		FrontPage.new(req, res, db)
 		return
 
 	let id = req:params:id

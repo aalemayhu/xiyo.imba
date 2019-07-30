@@ -1,7 +1,7 @@
 export tag UrlForm < form
 
 	def render
-		<self action="/create/">
+		<self method="post" action="/create/">
 			<div.field.has-addons>
 				<div.control.is-expanded>
 					<input@input.input type='url' name='url' placeholder='Enter your URL here' css:width='256px'>

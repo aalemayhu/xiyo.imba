@@ -26,6 +26,7 @@
     "webpack-dev-server": "^3.1.10"
   },
   "dependencies": {
+    "body-parser": "^1.19.0",
     "chalk": "^2.4.2",
     "imba": "1.4.1",
     "imba-router": "^0.2.0",
