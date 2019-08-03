@@ -18,6 +18,8 @@ export tag App
 					<hr>
 					if data:visits
 						<p> "Visits {data:visits}"
+					<a.github href="https://github.com/scanf/xiyo.imba"> "GitHub"
+					<br>
 					<span> 
 						"Built with"
 						<a href="https://github.com/imba/imba"> " Imba"

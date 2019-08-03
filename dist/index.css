@@ -81,3 +81,8 @@ h1 {
   opacity: .95;
   background-color: #fff;
   text-align: center; }
+
+.github {
+  position: absolute;
+  right: 16px;
+  bottom: 4px; }
