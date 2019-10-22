@@ -13,11 +13,17 @@ using the cool [start-imba][2] tool.
 
 ## Usage
 
-Assuming you have setup the PostgreSQL database server you can run
+Assuming you have setup the PostgreSQL database server you can run following commands.
 
-```
+Install the dependencies:
+```bash
 yarn install
-# or
+#or
+npm install
+```
+
+Run the app:
+```bash
 npm start
 ```
 
