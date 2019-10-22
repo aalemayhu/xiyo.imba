@@ -53,7 +53,7 @@ to the front page.
 ## Setting up the database
 
 ```bash
-npm init-db
+npm run init-db
 # or
 psql -f init-db.psql
 ```
