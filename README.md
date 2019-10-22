@@ -16,10 +16,9 @@ using the cool [start-imba][2] tool.
 Assuming you have setup the PostgreSQL database server you can run
 
 ```
-$ yarn install
-$ ./main.imba 
-Imba v1.4.4 is already loaded.
-Listening on http://localhost:8080
+yarn install
+# or
+npm start
 ```
 
 Then visit [http://localhost:8080](http://localhost:8080).
@@ -29,9 +28,8 @@ Then visit [http://localhost:8080](http://localhost:8080).
 If you don't want to install the dependencies you can run it under docker
 
 ```bash
-$ docker build -t xiyo.imba .
-$ docker run -p 8080:8080 xiyo.imba
-Listening on http://localhost:8080
+docker build -t xiyo.imba .
+docker run -p 8080:8080 xiyo.imba
 ```
 
 ## Design
@@ -48,6 +46,13 @@ to the front page.
 
 ## Setting up the database
 
+```bash
+npm init-db
+# or
+psql -f init-db.psql
+```
+
+Or you can execute script manually with `psql` or other tool:
 ```psql
 CREATE USER xiyo WITH PASSWORD 'sushi-something';
 

@@ -1,0 +1,15 @@
+CREATE USER xiyo WITH PASSWORD 'sushi-something';
+
+CREATE DATABASE xiyo;
+ALTER ROLE xiyo SET client_encoding TO 'utf8';
+ALTER ROLE xiyo SET default_transaction_isolation TO 'read committed';
+ALTER ROLE xiyo SET timezone TO 'UTC';
+GRANT ALL PRIVILEGES ON DATABASE xiyo TO xiyo;
+
+CREATE TABLE urls(
+   id serial PRIMARY KEY,
+   url VARCHAR (3000) UNIQUE NOT NULL,
+   created_on TIMESTAMP NOT NULL,
+   visits numeric DEFAULT 0,
+   UNIQUE(url)
+);

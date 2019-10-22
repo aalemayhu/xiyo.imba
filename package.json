@@ -6,7 +6,8 @@
   "main": "./main.imba",
   "scripts": {
     "start": "./main.imba",
-    "build": "webpack --mode=production"
+    "build": "webpack --mode=production",
+    "init-db": "psql -f init-db.psql"
   },
   "keywords": [
     "imba",
