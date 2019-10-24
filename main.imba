@@ -48,8 +48,6 @@ app.post('/create/') do |req,res|
 
 # GET / 
 app.get(/.*/) do |req,res|
-	throw new Error('Test error')
-	myUndefinedFunction()
 	FrontPage.new(req, res, db)
 
 const host = HostInformation.new
