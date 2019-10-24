@@ -12,7 +12,22 @@ const bodyParser = require 'body-parser'
 const chalk = require 'chalk'
 const express = require 'express'
 
-const app = express()
+const BUGSNAG_ID = process:env:BUGSNAG_ID
+let app
+
+if BUGSNAG_ID
+	const bugsnag = require '@bugsnag/js'
+	const bugsnagExpress = require '@bugsnag/plugin-express'
+	const bugsnagClient = bugsnag(BUGSNAG_ID)
+	bugsnagClient.use(bugsnagExpress)
+
+	app = express()
+	const middleware = bugsnagClient.getPlugin('express')
+	app.use(middleware:requestHandler)
+	app.use(middleware:errorHandler)
+else
+	app = express()
+
 app.use(express.static('./'))
 app.use( bodyParser.json() )
 
@@ -33,6 +48,8 @@ app.post('/create/') do |req,res|
 
 # GET / 
 app.get(/.*/) do |req,res|
+	throw new Error('Test error')
+	myUndefinedFunction()
 	FrontPage.new(req, res, db)
 
 const host = HostInformation.new
