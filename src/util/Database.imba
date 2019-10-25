@@ -17,8 +17,12 @@ export class Database
 			password: PGPASSWORD
 			port: PGPORT,
 		})
-
-
+		@pool.query('SELECT NOW()', &) do |err, res|
+			if err
+				console.error(err)
+				console.log "Is the Database available and credentials setup?"
+				console.log "See https://github.com/scanf/xiyo.imba#setting-up-the-database"
+				process.exit(1)
 
 	# Convience method to reduce copy / pasta
 	def psql name, text, values
