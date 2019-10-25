@@ -4,11 +4,11 @@ export class Database
 
 	def initialize		
 		# TODO: move db stuff into own class
-		const PGHOST = process:env.PGHOST or 'localhost'
-		const PGUSER = process:env.PGUSER or 'xiyo'
-		const PGDATABASE = process:env.PGDATABASE or 'xiyo'
-		const PGPASSWORD = process:env.PGPASSWORD or 'sushi-something'
-		const PGPORT = process:env.PGPORT or 5432
+		const PGHOST = process:env:PGHOST or 'localhost'
+		const PGUSER = process:env:PGUSER or 'xiyo'
+		const PGDATABASE = process:env:PGDATABASE or 'xiyo'
+		const PGPASSWORD = process:env:PGPASSWORD or 'sushi-something'
+		const PGPORT = process:env:PGPORT or 5432
 
 		@pool = pg.Pool({
 			user: PGUSER,
