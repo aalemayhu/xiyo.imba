@@ -7,7 +7,10 @@
   "scripts": {
     "start": "./main.imba",
     "build": "webpack --mode=production",
-    "init-db": "psql -f init-db.psql"
+    "init-db": "psql -f init-db.psql",
+    "docker-build": "docker build -t xiyo.no:latest .",
+    "docker-deploy": "docker push xiyo.no:latest",
+    "docker-run": "docker run -p8080:8080 -t -i xiyo.no:latest"
   },
   "keywords": [
     "imba",
